@@ -1,28 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
+import Counter from "./components/Counter";
+import Input from "./components/Input";
 
 function App() {
-  const [counter, setCounter] = useState(0);
-  const [value, setValue] = useState("Текст в инпуте");
-
-  function increment() {
-    setCounter(counter + 1);
-  }
-
-  function decrement() {
-    setCounter(counter - 1);
-  }
-
   return (
     <div className="App">
-      <h1>{counter}</h1>
-      <h1>{value}</h1>
-      <input
-        type="text"
-        value={value}
-        onChange={(event) => setValue(event.target.value)}
-      ></input>
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
+      <Counter />
+      <Input />
     </div>
   );
 }
